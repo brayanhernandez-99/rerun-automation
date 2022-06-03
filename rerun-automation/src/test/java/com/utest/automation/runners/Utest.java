@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/utest.feature",
         glue = "com.utest.automation.stepdefinitions",
-        plugin = "rerun:target/runFailed/TestRerun.txt",
+        plugin = "rerun:target/TestFailed/TestFailed.txt",
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )
 

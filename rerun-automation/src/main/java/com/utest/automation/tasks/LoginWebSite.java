@@ -7,6 +7,8 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.openqa.selenium.Keys;
 
 import static com.utest.automation.userinterfaces.Login.*;
@@ -32,7 +34,8 @@ public class LoginWebSite implements Task {
         actor.attemptsTo(
                 Click.on(Home.BTN_LOG_IN),
                 Enter.theValue(email).into(TXT_EMAIL),
-                Enter.theValue(password).into(TXT_PASSWORD).thenHit(Keys.ENTER)
+                Enter.theValue(password).into(TXT_PASSWORD).thenHit(Keys.ENTER),
+                WaitUntil.the(LBL_INVALID_LOGIN, WebElementStateMatchers.isVisible()).forNoMoreThan(5).seconds()
         );
     }
 }

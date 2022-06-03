@@ -1,8 +1,8 @@
 package com.utest.automation.stepdefinitions;
 
 import com.utest.automation.exceptions.MessageNotMatchException;
-import com.utest.automation.interactions.Clicks;
 import com.utest.automation.models.Login;
+import com.utest.automation.questions.InvalidCredentials;
 import com.utest.automation.tasks.LoginWebSite;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
@@ -41,10 +41,10 @@ public class UtestStepDefinitions {
     public void theUserEnterEmailAndPassword(List<Login> credentials) {
         OnStage.theActorInTheSpotlight().attemptsTo(LoginWebSite.with(credentials));
     }
-//
-//    @Then("^the user will be able to see the change the currency in this page for (.*)$")
-//    public void theUserWillBeAbleToSeeTheChangeTheCurrencyInThisPageFor(String currency) {
-//        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(ValidateChangeCurrency.validate(), Matchers.equalTo(currency)).orComplainWith(MessageNotMatchException.class, "The change currency failure"));
-//    }
+
+    @Then("the user will see {string}")
+    public void theUserWillSee(String invalidCredentials) {
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(InvalidCredentials.validate(), Matchers.equalTo(invalidCredentials)).orComplainWith(MessageNotMatchException.class, "The username or password invalid."));
+    }
 
 }

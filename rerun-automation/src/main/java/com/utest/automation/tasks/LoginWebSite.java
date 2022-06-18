@@ -1,6 +1,5 @@
 package com.utest.automation.tasks;
 
-import com.utest.automation.models.Login;
 import com.utest.automation.userinterfaces.Home;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
@@ -14,18 +13,19 @@ import org.openqa.selenium.Keys;
 import static com.utest.automation.userinterfaces.Login.*;
 
 import java.util.List;
+import java.util.Map;
 
 public class LoginWebSite implements Task {
 
     private String email;
     private String password;
 
-    public LoginWebSite(List<Login> credentials) {
-        this.email = credentials.get(0).getEmail();
-        this.password = credentials.get(0).getPassword();
+    public LoginWebSite(List<Map<String, String>> credentials) {
+        this.email = credentials.get(0).get(email);
+        this.password = credentials.get(0).get(password);
     }
 
-    public static LoginWebSite with(List<Login> credentials) {
+    public static LoginWebSite with(List<Map<String, String>> credentials) {
         return Instrumented.instanceOf(LoginWebSite.class).withProperties(credentials);
     }
 

@@ -36,7 +36,7 @@ dependencies {
     implementation "net.serenity-bdd:serenity-screenplay-webdriver:${SerenityCoreVersion}"
 
     implementation 'org.apache.commons:commons-lang3:3.12.0'
-    implementation 'org.assertj:assertj-core:3.22.0'
+    implementation 'org.assertj:assertj-core:3.23.1'
     implementation 'org.slf4j:slf4j-simple:1.7.36'
     compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
@@ -54,7 +54,7 @@ tasks.withType(Test) {
 
 tasks.test{
     retry {
-        maxRetries.set(2)
+        maxRetries.set(1)
         maxFailures.set(10)
         failOnPassedAfterRetry.set(true)
     }

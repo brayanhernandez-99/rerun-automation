@@ -37,8 +37,8 @@ public class UtestStepDefinitions {
         OnStage.theActorInTheSpotlight().wasAbleTo(Open.url(UTEST));
     }
 
-    @When("the user enter email and password")
-    public void theUserEnterEmailAndPassword(List<Login> credentials) {
+    @When("the user enter yours credentials")
+    public void theUserEnterYoursCredentials(List<Login> credentials) {
         OnStage.theActorInTheSpotlight().attemptsTo(LoginWebSite.with(credentials));
     }
 

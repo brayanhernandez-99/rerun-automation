@@ -6,7 +6,7 @@ Feature: Automation tests of Utest.com.
 
   @login-invalid
   Scenario: Login in the website.
-    When the user enter email and password
+    When the user enter yours credentials
       | email             | password |
       | invalid@email.com | 12345    |
     Then the user will see "Invalid username or password"

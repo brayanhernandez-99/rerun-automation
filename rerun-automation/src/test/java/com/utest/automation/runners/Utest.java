@@ -10,7 +10,7 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 @CucumberOptions(
         features = "src/test/resources/features/utest.feature",
         glue = "com.utest.automation.stepdefinitions",
-        plugin = "rerun:target/test/failed/testFailed.txt",
+        plugin = "rerun:target/failed/tests.txt",
         snippets = CAMELCASE
 )
 

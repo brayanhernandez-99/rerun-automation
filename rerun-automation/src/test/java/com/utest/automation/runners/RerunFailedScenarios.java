@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "@target/test/failed/testFailed.txt",
+        features = "@target/failed/tests.txt",
         glue = "com.utest.automation.stepdefinitions",
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )

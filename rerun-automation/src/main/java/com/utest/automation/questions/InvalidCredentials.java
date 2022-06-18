@@ -4,7 +4,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
 
-import static com.utest.automation.userinterfaces.Login.LBL_INVALID_LOGIN;
+import static com.utest.automation.userinterfaces.PageLogin.LBL_INVALID_LOGIN;
 
 public class InvalidCredentials implements Question {
 

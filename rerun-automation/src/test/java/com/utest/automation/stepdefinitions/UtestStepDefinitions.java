@@ -1,6 +1,7 @@
 package com.utest.automation.stepdefinitions;
 
 import com.utest.automation.exceptions.MessageNotMatchException;
+import com.utest.automation.models.Login;
 import com.utest.automation.questions.InvalidCredentials;
 import com.utest.automation.tasks.LoginWebSite;
 import io.cucumber.java.Before;
@@ -17,7 +18,6 @@ import org.hamcrest.Matchers;
 import org.openqa.selenium.WebDriver;
 
 import java.util.List;
-import java.util.Map;
 
 import static com.utest.automation.utils.EndPoints.UTEST;
 
@@ -38,7 +38,7 @@ public class UtestStepDefinitions {
     }
 
     @When("the user enter email and password")
-    public void theUserEnterEmailAndPassword(List<Map<String, String>> credentials) {
+    public void theUserEnterEmailAndPassword(List<Login> credentials) {
         OnStage.theActorInTheSpotlight().attemptsTo(LoginWebSite.with(credentials));
     }
 
@@ -46,5 +46,4 @@ public class UtestStepDefinitions {
     public void theUserWillSee(String invalidCredentials) {
         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(InvalidCredentials.validate(), Matchers.equalTo(invalidCredentials)).orComplainWith(MessageNotMatchException.class, "The username or password invalid."));
     }
-
 }

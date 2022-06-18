@@ -9,4 +9,4 @@ Feature: Automation tests of Utest.com.
     When the user enter email and password
       | email             | password |
       | invalid@email.com | 12345    |
-    Then the user will see 'Invalid username or password'
+    Then the user will see "Invalid username or password"

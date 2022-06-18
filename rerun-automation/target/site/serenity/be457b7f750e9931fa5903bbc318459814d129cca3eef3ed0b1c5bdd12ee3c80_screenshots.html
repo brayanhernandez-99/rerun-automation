@@ -148,7 +148,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 18-06-2022 11:06</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 18-06-2022 12:12</span>
     <br style="clear:left"/>
 </div>
 
@@ -192,9 +192,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
-                                <span class="failing-color">Login in the website.
+                                <span class="error-color">Login in the website.
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -216,7 +216,7 @@
         <div class="table">
             <div class="row">
                 <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">Message not match exception: The username or password invalid. - Expected: 'Invalid username or password' but: was 'Invalid username or password.'</span>
+                    <span class="error-message error-message-title">Unrecognised exception</span>
                 </div>
                 <div class="col-sm-2">
                     <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
@@ -232,49 +232,29 @@
         <div class="collapse multi-collapse" id="stacktraceModal-overall">
             <div class="card">
                 <div class="card-header">
-                    <h4>com.utest.automation.exceptions.MessageNotMatchException </h4>
+                    <h4>net.serenitybdd.core.exceptions.UnrecognisedException </h4>
                 </div>
                 <div class="card-body">
                     <div>
-                        <pre>com.utest.automation.stepdefinitions.UtestStepDefinitions.theUserWillSee(UtestStepDefinitions.java:47)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java:66)<br />io.cucumber.java.Invoker.invoke(Invoker.java:24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:64)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:104)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:73)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:259)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:58)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                        <pre>io.cucumber.datatable.UndefinedDataTableTypeException.listNoConverterDefined(UndefinedDataTableTypeException.java:110)<br />io.cucumber.datatable.DataTableTypeRegistryTableConverter.toList(DataTableTypeRegistryTableConverter.java:144)<br />io.cucumber.datatable.DataTableTypeRegistryTableConverter.convert(DataTableTypeRegistryTableConverter.java:110)<br />io.cucumber.datatable.DataTable.convert(DataTable.java:360)<br />io.cucumber.core.stepexpression.StepExpressionFactory.lambda$createExpression$0(StepExpressionFactory.java:66)<br />io.cucumber.core.stepexpression.DataTableArgument.getValue(DataTableArgument.java:19)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:47)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:64)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:104)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:73)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:259)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:58)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
                     </div>
 
-                    <h4>
-                        Caused by: java.lang.AssertionError
-                    </h4>
-                    <div>
-                            <pre>Expected: &quot;Invalid username or password&quot;<br>     but: was &quot;Invalid username or password.&quot;</pre>
-                        <pre>com.utest.automation.stepdefinitions.UtestStepDefinitions.theUserWillSee(UtestStepDefinitions.java :47)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java :66)<br />io.cucumber.java.Invoker.invoke(Invoker.java :24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java :47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java :29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java :66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java :63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java :92)<br />io.cucumber.core.runner.TestStep.run(TestStep.java :64)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java :51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java :104)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java :73)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java :135)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java :27)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java :259)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java :58)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java :69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java :74)<br /></pre>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
                 <div class="panel-body">
-                    <a href="pagesource8456500499745598990.html" target="_blank" class="btn btn-info">HTML Source</a>
+                    <a href="pagesource5971038823126892444.html" target="_blank" class="btn btn-info">HTML Source</a>
                 </div>
             </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="327a5d7cdcb0380c9faa2d2aa48e6bdd95a942b066cd94bd55f0483af69e7463.png" title=" Given the user is in the page Utest" width="1034"/>
-                <img src="327a5d7cdcb0380c9faa2d2aa48e6bdd95a942b066cd94bd55f0483af69e7463.png" title=" User opens the https://www.utest.com/" width="1034"/>
-                <img src="327a5d7cdcb0380c9faa2d2aa48e6bdd95a942b066cd94bd55f0483af69e7463.png" title=" Given the user is in the page Utest (completed)" width="1034"/>
-                <img src="6cbb0336828fad20c1c75d2941cb902752f74c202d9023958d68e2a5068a260c.png" title=" When the user enter email and password
+                <img src="49777a31483e48b547c33ed6966f1c8d2b6d770a34fa8b87b0c5597bba9a2c12.png" title=" Given the user is in the page Utest" width="1034"/>
+                <img src="49777a31483e48b547c33ed6966f1c8d2b6d770a34fa8b87b0c5597bba9a2c12.png" title=" User opens the https://www.utest.com/" width="1034"/>
+                <img src="62101dae13fcb7fc6c0157c618004954f119acc63516f095a461ee2d76b14b70.png" title=" Given the user is in the page Utest (completed)" width="1034"/>
+                <img src="7c11338e9424da7a05ef0dbd28e2643591d49cb341c8c06ee9c6e28a71cc8098.png" title=" When the user enter email and password
 | email | password |
-| invalid@email.com | 12345 |" width="1034"/>
-                <img src="7c11338e9424da7a05ef0dbd28e2643591d49cb341c8c06ee9c6e28a71cc8098.png" title=" User login web site" width="1034"/>
-                <img src="ba5f3de276f72992e4c6a5c27188c8dd14bed07f3571ef063507d8ef7d88790e.png" title=" User clicks on Login button" width="1034"/>
-                <img src="785200a14ec90c937853289c4a5d7ad5e9f8d62c132de2e6db5e9e23fe7fccf7.png" title=" User clicks on Login button (completed)" width="1034"/>
-                <img src="785200a14ec90c937853289c4a5d7ad5e9f8d62c132de2e6db5e9e23fe7fccf7.png" title=" User enters '' into Text field email address." width="1034"/>
-                <img src="d137eab1f4c6c5023c35970bc3d7e7a86b61244906901c0460a606465855f33c.png" title=" User enters '' into Text field email address. (completed)" width="1034"/>
-                <img src="d137eab1f4c6c5023c35970bc3d7e7a86b61244906901c0460a606465855f33c.png" title=" User enters '' then hits [ENTER] into Text field password." width="1034"/>
-                <img src="819cf73350ea9190c778e6efc285aef6c11e340dfe42e1d30344d15f989d862a.png" title=" User enters '' then hits [ENTER] into Text field password. (completed)" width="1034"/>
-                <img src="819cf73350ea9190c778e6efc285aef6c11e340dfe42e1d30344d15f989d862a.png" title=" User login web site (completed)" width="1034"/>
-                <img src="819cf73350ea9190c778e6efc285aef6c11e340dfe42e1d30344d15f989d862a.png" title=" When the user enter email and password
-| email | password |
-| invalid@email.com | 12345 | (completed)" width="1034"/>
-                <img src="819cf73350ea9190c778e6efc285aef6c11e340dfe42e1d30344d15f989d862a.png" title=" Then the user will see 'Invalid username or password'" width="1034"/>
-                <img src="819cf73350ea9190c778e6efc285aef6c11e340dfe42e1d30344d15f989d862a.png" title=" Then invalid credentials should be 'Invalid username or password': <span class='failing-color'>FAILURE</span>" width="1034"/>
+| {invalid@email.com} | {12345} |: <span class='error-color'>ERROR</span>" width="1034"/>
             </div>
         </div>
 
